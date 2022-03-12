@@ -12,7 +12,7 @@ health = requests.get(server + "/-/health")
 readiness = requests.get(server + "/-/readiness?all=1")
 liveness = requests.get(server + "/-/liveness")
 
-if health.text == "Gitlab OK":
+if health.text == "GitLab OK":
     sys.stdout.write('0 "Health" - Health passed')
 else:
     sys.stdout.write('2 "Health" - Health failed')
